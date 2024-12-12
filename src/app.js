@@ -7,7 +7,7 @@ const externalRoutes = require('./routes/externalRoutes');
 const ethersRoutes = require('./routes/ethersRoutes');
 const cors = require('cors');
 const app = express();
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 4000;
 const corsOptions = {
    origin: '*', // Allow all origins (you can specify specific origins here)
    methods: 'GET,HEAD,PUT,PATCH,POST,DELETE', // Allowed methods
