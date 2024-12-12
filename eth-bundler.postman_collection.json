@@ -1,0 +1,394 @@
+{
+	"info": {
+		"_postman_id": "15c1f50d-315f-4985-a0f4-f8abd51e2614",
+		"name": "eth-bundler",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "33332730",
+		"_collection_link": "https://warped-satellite-4323.postman.co/workspace/My-Workspace~70720105-2aa5-4a91-8bd5-cf4ee56b375c/collection/34427502-15c1f50d-315f-4985-a0f4-f8abd51e2614?action=share&source=collection_link&creator=33332730"
+	},
+	"item": [
+		{
+			"name": "rpc",
+			"item": [
+				{
+					"name": "register",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"walletAddress\": \"0x7AB7aba8a43B4D8A02406e4A8594479EAfD45e36\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/auth/register",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"auth",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "save-rpc-url",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"walletAddress\": \"0x7AB7aba8a43B4D8A02406e4A8594479EAfD45e36\",\r\n  \"rpcUrl\": \"https://eth.llamarpc.com\",\r\n  \"name\": \"https://eth.llamarpc.com\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/rpc/save-rpc-url",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"rpc",
+								"save-rpc-url"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete-rpc-url",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"walletAddress\":\"0x7AB7aba8a43B4D8A02406e4A8594479EAfD45e36\",\r\n    \"name\":\"Infura Mainnet Updated\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/rpc/delete-rpc-url",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"rpc",
+								"delete-rpc-url"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update-rpc-url",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"walletAddress\": \"0x7AB7aba8a43B4D8A02406e4A8594479EAfD45e36\",\r\n  \"oldName\": \"BSC Mainnet\",\r\n  \"newName\": \"li\",\r\n  \"rpcUrl\": \"https://eth-pokt.nodies.app\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/rpc/update-rpc-url",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"rpc",
+								"update-rpc-url"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "list-rpc",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"walletAddress\": \"0x7AB7aba8a43B4D8A02406e4A8594479EAfD45e36\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/rpc/list-rpc-urls",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"rpc",
+								"list-rpc-urls"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"description": "Routes for Creating , editing, deleting rpc url on ownerwallet"
+		},
+		{
+			"name": "wallet",
+			"item": [
+				{
+					"name": "create-worker-wallet",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"ownerWallet\": \"0x7AB7aba8a43B4D8A02406e4A8594479EAfD45e36\",\r\n  \"number\": 5\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/wallet/create-worker-wallet",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"wallet",
+								"create-worker-wallet"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "sendToken",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"ownerWalletAddress\": \"0x7AB7aba8a43B4D8A02406e4A8594479EAfD45e36\",\r\n  \"rpcUrl\":  \"https://eth.llaarpc.com\",  \r\n   \"tokenAddress\": \"0xdAC17F958D2ee523a2206206994597C13D831ec7\",\r\n  \"fromAddress\": \"0x441568d3bC0DC48dC38Cc3A22e464946F0Fa2CBe\",\r\n  \"toAddress\":\"0xa14F4A575103FF286E69184226CE98175DAB52A0\",\r\n  \"amount\": \"0.1\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/wallet/sendToken",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"wallet",
+								"sendToken"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "list-worker-wallets",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"ownerWallet\": \"0x7AB7aba8a43B4D8A02406e4A8594479EAfD45e36\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/wallet/list-worker-wallets",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"wallet",
+								"list-worker-wallets"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "send",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"ownerWalletAddress\": \"0x7AB7aba8a43B4D8A02406e4A8594479EAfD45e36\",\r\n  \"rpcUrl\":  \"https://eth.llamarpc.com\",  \r\n  \"fromAddress\": \"0x441568d3bC0DC48dC38Cc3A22e464946F0Fa2CBe\",\r\n  \"toAddress\":\"0xa14F4A575103FF286E69184226CE98175DAB52A0\",\r\n  \"amount\": \"0.1\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/wallet/send",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"wallet",
+								"send"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "list-wallets",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"ownerWallet\": \"0x7AB7aba8a43B4D8A02406e4A8594479EAfD45e36\",\r\n  \"page\": 1,\r\n  \"limit\": 5\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/wallet/list-wallets",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"wallet",
+								"list-wallets"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getAllBalances",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"ownerAddress\": \"0x7AB7aba8a43B4D8A02406e4A8594479EAfD45e36\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/wallet/get-all-balances",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"wallet",
+								"get-all-balances"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "set-wallet-type",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"ownerWallet\": \"0x7AB7aba8a43B4D8A02406e4A8594479EAfD45e36\",\r\n  \"walletAddresses\":[\"0xDB58b1DBB68F37216f86117013349f7Ad4A0CcEF\"],\r\n  \"isFundingWallet\":false,\r\n  \"isWorkerWallet\":false\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/wallet/set-wallet-type",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"wallet",
+								"set-wallet-type"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get-balance",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n            \"rpcUrl\": \"https://eth-pokt.nodies.app\",\r\n             \"ownerAddress\": \"0x7AB7aba8a43B4D8A02406e4A8594479EAfD45e36\",\r\n \"walletAddress\": \"0x22159472Fb42eB68F7be80BA300770E710Dea35c\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/wallet/get-balance",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"wallet",
+								"get-balance"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
